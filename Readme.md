@@ -27,9 +27,13 @@ After downloading and unziping the file, you will find 4 different directories:
 - In `project1/style.css`, set the `<p class="company">...</p>` text bold with the CSS property `font-weight` (https://www.w3schools.com/cssref/pr_font_weight.asp)
 
 ### Project 2 | HTML & CSS with Twitter Bootstrap
-> HTML: Change text + tag
-> CSS: change color
-> Bootstrap: make a blue button
+
+- In `project2/index.html`, change "_John Doe_" with your name and email
+- In `project2/index.html`, add a link to your LinkedIn page with a `<a>` tag with the class `my-button`(https://www.w3schools.com/tags/att_a_href.asp)
+- In `project2/style.css`, add a rule `.my-button` to make your link looking like a white button
+  - `background-color: white`: To set the backgroung white
+  - `color: black`: To set the font color black
+- In `project2/style.css` remove all the CSS rules and in `project2/index.html` add the classes `btn btn-light btn-lg` (https://getbootstrap.com/docs/4.0/components/buttons/)
 
 ### Project 3 | Basic JavaScript
 > var beertime = false;
@@ -73,3 +77,54 @@ After downloading and unziping the file, you will find 4 different directories:
   font-weight: bold;
 }
 ```
+
+### Project 2 | HTML & CSS with Twitter Bootstrap
+`project2/index.html`
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <title>TechLunch - Project 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="cover.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+
+        <header class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">TechLunch</h3>
+            <nav class="nav nav-masthead">
+              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link" href="https://getbootstrap.com/">Twitter Bootstrap</a>
+            </nav>
+          </div>
+        </header>
+
+        <main role="main" class="inner cover">
+          <h1 class="cover-heading">Build your awesome project together</h1>
+          <p>
+            Hello, my name is Maxence Bouret, I am a new developer that code projects using HTML, CSS and Twitter Bootstrap. If you are interested by my skill, feel free to send me an email at <u>maxence@ironhack.com</u>
+          </p>
+          <p>
+            <!-- Solution for the button link -->
+            <a href="https://www.linkedin.com/in/bouretm/" class="my-button btn btn-light btn-lg">Learn more about myself on LinkedIn</a>
+          </p>
+        </main>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
+
+`project2/style.css`
+> The file is empty thanks to Twitter Bootsrap 😃
