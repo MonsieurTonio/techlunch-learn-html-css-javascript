@@ -21,26 +21,29 @@ After downloading and unziping the file, you will find 4 different directories:
 
 ### Project 1 | Basic HTML & CSS
 
-- In `project1/index.html`, put your real name instead of "_Maxence_".
-- In `project1/index.html`, add a paragraph `<p>` to write your job title.
-- In `project1/style.css`, set the `<p class="company">...</p>` text color in green.
-- In `project1/style.css`, set the `<p class="company">...</p>` text bold with the CSS property `font-weight` (https://www.w3schools.com/cssref/pr_font_weight.asp)
+1. Open `project1/index.html` with Chrome or any other browser.
+2. In `project1/index.html`, put your real name instead of "_Maxence_".
+3. In `project1/index.html`, add a paragraph `<p>` to write your job title.
+4. In `project1/style.css`, set the `<p class="company">...</p>` text color in green.
+5. In `project1/style.css`, set the `<p class="company">...</p>` text bold with the CSS property `font-weight` (https://www.w3schools.com/cssref/pr_font_weight.asp).
 
 ### Project 2 | HTML & CSS with Twitter Bootstrap
 
-- In `project2/index.html`, change "_John Doe_" with your name and email
-- In `project2/index.html`, add a link to your LinkedIn page with a `<a>` tag with the class `my-button`(https://www.w3schools.com/tags/att_a_href.asp)
-- In `project2/style.css`, add a rule `.my-button` to make your link looking like a white button
-  - `background-color: white`: To set the backgroung white
-  - `color: black`: To set the font color black
-- In `project2/style.css` remove all the CSS rules and in `project2/index.html` add the classes `btn btn-light btn-lg` (https://getbootstrap.com/docs/4.0/components/buttons/)
+1. Open `project2/index.html` with Chrome or any other browser.
+2. In `project2/index.html`, change "_John Doe_" with your name and email.
+3. In `project2/index.html`, add a link to your LinkedIn page with a `<a>` tag with the class `my-button`(https://www.w3schools.com/tags/att_a_href.asp).
+4. In `project2/style.css`, add a rule `.my-button` to make your link looking like a white button:
+    - `background-color: white`: To set the backgroung white.
+    - `color: black`: To set the font color black.
+5. In `project2/style.css` remove all the CSS rules and in `project2/index.html` add the classes `btn btn-light btn-lg` (https://getbootstrap.com/docs/4.0/components/buttons/).
 
 ### Project 3 | Basic JavaScript
-> var beertime = false;
-> if (beertime) { $('.content').text("It's beer time!") }
-> else { $('.content').text("Nothing special") }
-> Change to false
-> Use Math.random()
+
+1. Open `project3/index.html` with Chrome or any other browser.
+2. In `project3/main.js`, set the variable `hours` to `20`. You should see on your browser: "_Yes, it's 20:00, so let's drink!_".
+3. In `project3/main.js`, set the variable `hours` to `Math.floor(24*Math.random())`. Every time you will refresh your browser, it will display a new hours and a new message.
+4. **Bonus**: you can set the variable `hours` with `(new Date()).getHours()`. You can also create a variable `minutes` and find the right syntax here: https://www.w3schools.com/jsref/jsref_obj_date.asp.
+
 
 ### Project 4 | Big project with a REST API
 > Make a nice website with Twitter Bootstrap
@@ -128,3 +131,19 @@ After downloading and unziping the file, you will find 4 different directories:
 
 `project2/style.css`
 > The file is empty thanks to Twitter Bootsrap 😃
+
+### Project 3 | Basic JavaScript
+
+`project3/main.js`
+```js
+// var hours = 20;                             // Solution of step 2
+// var hours = (Math.floor(24*Math.random())); // Solution of step 3
+var hours = (new Date()).getHours();           // Solution of step 4
+var minutes = (new Date()).getMinutes();       // Solution of step 4
+if (hours >= 18) {
+  $('.content').text("Yes, it's " + hours + ":" + minutes + ", so let's drink!")
+} else { 
+  $('.content').text("No, it's only " + hours + ":" + minutes + ", so go back to work!")
+}
+```
+

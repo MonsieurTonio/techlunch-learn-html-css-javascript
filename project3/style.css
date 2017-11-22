@@ -1,0 +1,14 @@
+body {
+  margin-top: 35vh;
+  background-color: #FFED65;
+  color: #353B3C;
+  font-family: Arial;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+p {
+  font-size: 25px;
+}
