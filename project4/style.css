@@ -26,6 +26,7 @@ h1 {
 .list-employees .btn.btn-danger:hover {
   color: white;
   margin-top: 6px;
+  min-width: 100px;
 }
 
 

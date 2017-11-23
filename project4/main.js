@@ -5,14 +5,23 @@ if (!page) {
 }
 
 // Call the API "GET https://randomuser.me/api/"
-jQuery.get(`https://randomuser.me/api/?seed=ironhack&page=${page}&results=10`, function( data ) {
+jQuery.get(`https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=${page}&results=10`, function( data ) {
   for (let i = 0; i < data.results.length; i++) {
     var name = data.results[i].name.first + " " + data.results[i].name.last;
+    var buttonText;
+    if (data.results[i].gender === 'male') {
+      buttonText = "Hire him"
+    }
+    else {
+      buttonText = "Hire her"
+    }
     // Add a new <li> tag in ".list-employees"
     $('.list-employees').append(`
       <li class="list-group-item">
         <img class="rounded-circle float-left" src="${data.results[i].picture.large}">
-        <a class="btn btn-danger float-right" href="https://www.linkedin.com/search/results/index/?keywords=${name}" target="_blank">Hire him<a/>
+        <a class="btn btn-danger float-right" href="https://www.linkedin.com/search/results/index/?keywords=${name}" target="_blank">
+          ${buttonText}
+        <a/>
         <strong class="name">${name}</strong><br>
         ${data.results[i].email}
       </li>

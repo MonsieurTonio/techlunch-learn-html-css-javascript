@@ -6,13 +6,18 @@
 
 This project is a short introduction to HTML, CSS and JavaScript where you will be guided to manipulate the different files.
 
-To start this project, you can simply click on the button ["**Clone or download > Download ZIP**"](https://github.com/ta-web-paris/techlunch-learn-html-css-javascript/archive/master.zip)
+To start this project, you can simply click on the button ["**Clone or download > Download ZIP**"](https://github.com/ta-web-paris/techlunch-learn-html-css-javascript/archive/master.zip).
 
 After downloading and unziping the file, you will find 4 different directories:
 - **project1**: Basic HTML & CSS
 - **project2**: HTML & CSS with Twitter Bootstrap
 - **project3**: Basic JavaScript
 - **project4**: Big project with a REST API
+
+You will need an editor tool to modify the files, such as [Sublime Text 3](https://www.sublimetext.com/3), that is nice and very light. And with Sublime, instead of opening every file, we recommand you to only open the main directory `techlunch-learn-html-css-javascript-master`.
+
+![Sublime Text](https://i.imgur.com/8zdLN8r.png)
+
 
 <!-- You will find the solution inside the branch `solution` by clicking on  ["**Branch: master > solution**"](https://github.com/ta-web-paris/techlunch-learn-html-css-javascript/tree/solution). But before that, let's dive into the code 😃  -->
 
@@ -48,10 +53,10 @@ After downloading and unziping the file, you will find 4 different directories:
 ### Project 4 | Big project with a REST API
 
 1. Open `project4/index.html` with Chrome or any other browser.
-1. Open "https://randomuser.me/api/?seed=ironhack&page=1&results=10" with your browser to see the data sent by this API. On Chrome, we recommand you to install [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc).
-3. In Chrome, change the URL and play with the parameters. For example:
-    - "[https://randomuser.me/api/?seed=ironhack&page=1&**results=2**](https://randomuser.me/api/?seed=ironhack&page=1&results=2)": display only 2 users
-    - "[https://randomuser.me/api/?seed=ironhack&page=1&results=10&**nat=fr**](https://randomuser.me/api/?seed=ironhack&page=1&results=10&nat=fr)": display only users with French nationality
+1. Open "https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=1&results=10" with your browser to see the data sent by this API. On Chrome, we recommand you to install [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc).
+3. In your browser, change the URL and play with the parameters. For example:
+    - "[https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=1&**results=2**](https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=1&results=2)": display only 2 users
+    - "[https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=1&results=10&**nat=fr**](https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=1&results=10&nat=fr)": display only users with French nationality
 4. In `project4/main.js`, change the API URL at line 8 and see the results on your browser.
 
 
@@ -154,9 +159,11 @@ if (hours >= 18) {
 
 ### Project 4 | Big project with a REST API
 
-`project3/main.js`
+`project4/main.js`
 ```js
 // Possible values for line 8
-jQuery.get(`https://randomuser.me/api/?seed=ironhack&page=${page}&results=20`, function( data ) {
-jQuery.get(`https://randomuser.me/api/?seed=ironhack&page=${page}&results=10&nat=fr`, function( data ) {
+jQuery.get(`https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=${page}&results=20`, function( data ) {
+jQuery.get(`https://randomuser.me/api/?seed=ironhack&format=prettyjson&page=${page}&results=10&nat=fr`, function( data ) {
 ```
+
+<!-- TODO: ajouter des images -->
