@@ -41,14 +41,19 @@ After downloading and unziping the file, you will find 4 different directories:
 
 1. Open `project3/index.html` with Chrome or any other browser.
 2. In `project3/main.js`, set the variable `hours` to `20`. You should see on your browser: "_Yes, it's 20:00, so let's drink!_".
-3. In `project3/main.js`, set the variable `hours` to `Math.floor(24*Math.random())`. Every time you will refresh your browser, it will display a new hours and a new message.
+3. In `project3/main.js`, set the variable `hours` to `Math.floor(24*Math.random())`. Every time you will refresh your browser, it will display a new hour and a new message.
 4. **Bonus**: you can set the variable `hours` with `(new Date()).getHours()`. You can also create a variable `minutes` and find the right syntax here: https://www.w3schools.com/jsref/jsref_obj_date.asp.
 
 
 ### Project 4 | Big project with a REST API
-> Make a nice website with Twitter Bootstrap
-> Use the API: https://randomuser.me/ 
-> Change some properties (number of persons, nationalities, gender)
+
+1. Open `project4/index.html` with Chrome or any other browser.
+1. Open "https://randomuser.me/api/?seed=ironhack&page=1&results=10" with your browser to see the data sent by this API. On Chrome, we recommand you to install [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc).
+3. In Chrome, change the URL and play with the parameters. For example:
+    - "[https://randomuser.me/api/?seed=ironhack&page=1&**results=2**](https://randomuser.me/api/?seed=ironhack&page=1&results=2)": display only 2 users
+    - "[https://randomuser.me/api/?seed=ironhack&page=1&results=10&**nat=fr**](https://randomuser.me/api/?seed=ironhack&page=1&results=10&nat=fr)": display only users with French nationality
+4. In `project4/main.js`, change the API URL at line 8 and see the results on your browser.
+
 
 ## Solutions
 
@@ -147,3 +152,11 @@ if (hours >= 18) {
 }
 ```
 
+### Project 4 | Big project with a REST API
+
+`project3/main.js`
+```js
+// Possible values for line 8
+jQuery.get(`https://randomuser.me/api/?seed=ironhack&page=${page}&results=20`, function( data ) {
+jQuery.get(`https://randomuser.me/api/?seed=ironhack&page=${page}&results=10&nat=fr`, function( data ) {
+```
